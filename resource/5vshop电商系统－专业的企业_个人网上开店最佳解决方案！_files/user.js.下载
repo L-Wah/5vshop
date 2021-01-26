@@ -1,0 +1,191 @@
+
+        $(function() {
+                $("#service a").hover(function() {
+                    if ($(this).prop("className") == "weixin_area") {
+                        $(this).children("img.hides").show();
+                    } else {
+                        $(this).children("div.hides").show();
+                        $(this).children("img.shows").hide();
+                        $(this).children("div.hides").animate({marginRight: '0px'}, '0');
+                    }
+                }, function() {
+                    if ($(this).prop("className") == "weixin_area") {
+                        $(this).children("img.hides").hide();
+                    } else {
+                        $(this).children("div.hides").animate({marginRight: '-163px'}, 0, function() {
+                            $(this).hide();
+                            $(this).next("img.shows").show();
+                        });
+                    }
+                });
+
+                $("#top_btn").click(function() {
+                    $("html,body").animate({scrollTop: 0}, 600);
+                });
+
+                //右侧导航 - 二维码
+                $(".weixin_area").hover(function() {
+                    $(this).children(".weixin").show();
+                },function(){
+                    $(this).children(".weixin").hide();
+                })
+            });
+		
+		
+		// 添加收藏
+
+function getCollect(uid,pkid){
+	if(uid<=0){
+	    layer.msg("请先登录!");
+	}
+	else {
+		$.ajax({
+			type:"GET",
+			url:"ajax.asp?action=collect&pkid="+pkid,
+			cache: false,
+			dataType:"html",
+			beforeSend:function(XMLHttpRequest){
+				layer.load();
+			},
+			error: function(request) {
+				layer.closeAll();
+				layer.msg("连接失败，请重试!");
+			},
+			success:function(date){
+				layer.closeAll();
+				if(date==1) {
+					document.getElementById("favok").innerText="已收藏";
+					layer.msg("您已经收藏过本商品!");
+				}
+				else if(date==2) {
+					document.getElementById("favok").innerText="已收藏";
+					layer.msg("已加入收藏!")
+				}
+			}
+		});
+	}
+}
+		// 添加收藏
+function getCollect2(uid,pkid){
+	if(uid<=0){
+	    layer.msg("请先登录!");
+	}
+	else {
+		$.ajax({
+			type:"GET",
+			url:"ajax.asp?action=collect&pkid="+pkid,
+			cache: false,
+			dataType:"html",
+			beforeSend:function(XMLHttpRequest){
+				layer.load();
+			},
+			error: function(request) {
+				layer.closeAll();
+				layer.msg("连接失败，请重试!");
+			},
+			success:function(date){
+				layer.closeAll();
+				if(date==1) {
+					layer.msg("您已经收藏过本商品!");
+				}
+				else if(date==2) {
+					layer.msg("已加入收藏!")
+				}
+			}
+		});
+	}
+}
+
+
+//删除购物车中商品
+
+function delCart(pkid){
+	layer.msg('确定要删除吗?', {
+		time: 0
+		,btn: ['确定', '取消']
+		,yes: function(index){
+			layer.close(index);
+			$.ajax({
+				type:"GET",
+				url:"ajax.asp?action=delcart&pkid="+pkid,
+				cache: false,
+				dataType:"html",
+				beforeSend:function(XMLHttpRequest){
+					layer.load();
+				},
+				error: function(request) {
+					layer.closeAll();
+					layer.msg("连接失败，请重试!");
+				},
+				success:function(date){
+					layer.closeAll();
+					if(date==1) {
+						location.reload();
+					}
+				}
+			});
+		}
+	});
+}
+
+
+//删除收藏：我的收藏页
+function delCollect(pkid){
+	layer.msg('确定要删除吗?', {
+		time: 0
+		,btn: ['确定', '取消']
+		,yes: function(index){
+			layer.close(index);
+			$.ajax({
+				type:"GET",
+				url:"ajax.asp?action=delfav&pkid="+pkid,
+				cache: false,
+				dataType:"html",
+				beforeSend:function(XMLHttpRequest){
+					layer.load();
+				},
+				error: function(request) {
+					layer.closeAll();
+					layer.msg("连接失败，请重试!");
+				},
+				success:function(date){
+					layer.closeAll();
+					if(date==1) {
+						location.reload();
+					}
+				}
+			});
+		}
+	});
+}
+
+
+//清空购物车
+function delCartall(){
+	layer.msg('确定要清空购物车吗?', {
+		time: 0
+		,btn: ['确定', '取消']
+		,yes: function(index){
+			layer.close(index);
+			$.ajax({
+				type:"GET",
+				url:"ajax.asp?action=delCartall",
+				cache: false,
+				dataType:"html",
+				beforeSend:function(XMLHttpRequest){
+					layer.load();
+				},
+				error: function(request) {
+					layer.closeAll();
+					layer.msg("连接失败，请重试!");
+				},
+				success:function(date){
+					layer.closeAll();
+					if(date==1) {
+						location.reload();
+					}
+				}
+			});
+		}
+	});
+}

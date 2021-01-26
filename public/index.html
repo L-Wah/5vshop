@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>电商平台</title>
+  <link rel="stylesheet" href="../css/index.css">
+  <script type="text/javascript" src="../js/index.js"></script>
+</head>
+<body>
+  <!-- 主体 -->
+  <section>
+  <!-- 导航栏 -->
+  <nav class="daohang">
+    <a href="index.html"><img src="../resource/logo.png" alt=""></a>
+    <ul>
+      <li><a href="index.html">首页</a></li>
+      <li><a href="">热卖商品</a></li>
+      <li><a href="">用户中心</a></li>
+      <li><a href="newList.html">商城新闻</a></li>
+    </ul>
+    <div>
+      <input type="search" name="shop" id="shop" placeholder="搜索">
+      <a href="#">      
+        <img src="../resource/search.png" alt="">
+      </a>
+    </div>
+    <img src="../resource/car.png" alt="">
+  </nav>
+  <!-- 轮播图 -->
+  <div class="lunbo" id="container">
+    <ul id="pic" onmouseover="jt_over()" onmouseout="jt_out()">
+      <li >
+        <a href="#">
+          <img src="../resource/lunbo1.jpg" alt="" >
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="../resource/lunbo2.jpg" alt="" >
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="../resource/lunbo3.jpg" alt="" >
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="../resource/lunbo4.jpg" alt="" >
+        </a>
+      </li>
+      <li>
+        <a href="#">
+          <img src="../resource/lunbo5.jpg" alt="" >
+        </a>
+      </li>
+    </ul>
+    <ul id="point">
+      <li value="0" class="one"></li>
+      <li value="1"></li>
+      <li value="2"></li>
+      <li value="3"></li>
+      <li value="4"></li>
+    </ul>
+    <div class="left" id="left" onmouseover="jtover_left()" onmouseout="jtout_left()"><img src="../resource/arrow-left.png"/></div>
+		<div class="right" id="right" onmouseover="jtover_right()" onmouseout="jtout_right()"><img src="../resource/arrow-right.png"/></div>
+    <div class="banner_link">
+      <ul>
+        <li id="d1" onmouseover="pop('d1')" onmouseout="out('d1')">
+          <a href="#">
+              <div>手机</div>
+              <img src="../resource/pr.png" alt="" class="jiantou1">
+          </a>
+          <ul>
+            <li><a href="#">小米手机</a></li>
+            <li><a href="#">华为手机</a></li>
+            <li><a href="#">苹果手机</a></li>
+          </ul>
+        </li>
+        <li id="d2" onmouseover="pop('d2')" onmouseout="out('d2')">
+          <a href="#">
+            <div>笔记本、显示器</div>
+            <img src="../resource/pr.png" alt="" class="jiantou2">
+          </a>
+          <ul>
+            <li><a href="#">笔记本</a></li>
+            <li><a href="#">显示器</a></li>
+            <li><a href="#">平板</a></li>
+          </ul>
+        </li>
+        <li id="d3" onmouseover="pop('d3')" onmouseout="out('d3')">
+          <a href="#">
+            <div>耳机</div>
+            <img src="../resource/pr.png" alt="" class="jiantou3">
+          </a>
+          <ul>
+            <li><a href="#">小爱音箱</a></li>
+            <li><a href="#">线控耳机</a></li>
+            <li><a href="#">蓝牙耳机</a></li>
+            <li><a href="#">头戴耳机</a></li>
+            <li><a href="#">蓝牙音箱</a></li>
+          </ul>
+        </li>
+        <li id="d4" onmouseover="pop('d4')" onmouseout="out('d4')">
+          <a href="#">
+            <div>智能家居</div>
+            <img src="../resource/pr.png" alt="" class="jiantou4">
+          </a>
+          <ul>
+            <li><a href="#">无线路由器</a></li>
+            <li><a href="#">智能门锁</a></li>
+            <li><a href="#">摄像头</a></li>
+            <li><a href="#">电视盒子</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <!-- 推荐商品 -->
+  <div class="tj">
+    <div class="tj_title">推荐商品</div>
+    <div class="tuijian">
+      <div class="gezi">
+        <a href="newList.html">
+          <img src="../resource/new.png" alt="">
+          <div>新闻中心</div>
+        </a>
+        <a href="#">
+          <img src="../resource/iconuser.png" alt="">
+          <div>会员中心</div>
+        </a>
+        <a href="#">
+          <img src="../resource/iconorder.png" alt="">
+          <div>我的订单</div>
+        </a>
+        <a href="#">
+          <img src="../resource/iconfav.png" alt="">
+          <div>我的收藏</div>
+        </a>
+      </div>
+      <a href="#"><div><img src="../resource/tuijian1.jpg" alt=""></div></a>
+      <a href="#"><div><img src="../resource/tuijian2.jpg" alt=""></div></a>
+      <a href="#"><div><img src="../resource/tuijian3.jpg" alt=""></div></a>
+    </div>
+  </div>
+  <!-- 热卖商品 -->
+  <div class="rm">
+    <div class="rm_title">热卖商品</div>
+    <ul>
+      <li>
+        <div><a href="#"><img src="../resource/remai1.jpg" alt=""></a>
+        </div>
+      </li>
+      <li>
+        <div>
+          <a href="">
+            <img src="../resource/remai2.jpg" alt="">
+            <div class="good_name">魅族极简都市双肩包</div>
+            <div class="good_price">￥180.00元</div>
+          </a>
+        </div>
+      </li>
+      <li>
+        <div>
+          <a href="">
+            <img src="../resource/remai3.jpg" alt="">
+            <div class="good_name">Lifeme 梨木伞</div>
+            <div class="goods_desc">高定时装压花伞布进口水涂层</div>
+            <div class="good_price">￥499.00元</div>
+          </a>
+        </div>
+      </li>
+      <li>
+        <div>
+          <a href="">
+            <img src="../resource/remai4.jpg" alt="">
+            <div class="good_name">HUAWEI VR Glass眼镜</div>
+            <div class="goods_desc">IMAX巨幕惊心动魄的体验</div>
+            <div class="good_price">￥2999.00元</div>
+          </a>
+        </div>
+      </li>
+      <li>
+        <div>
+          <a href="">
+            <img src="../resource/remai5.jpg" alt="">
+            <div class="good_name">小米VR一体机面罩</div>
+            <div class="good_price">￥99.00元</div>
+          </a>
+        </div>
+      </li>
+      <li>
+        <div>
+          <a href="">
+            <img src="../resource/remai6.jpg" alt="">
+            <div class="good_name">米家九号平衡轮</div>
+            <div class="goods_desc">双脚分离式设计 三步轻松上手</div>
+            <div class="good_price">￥799.00元</div>
+          </a>
+        </div>
+      </li>
+      <li>
+        <div>
+          <a href="">
+            <img src="../resource/remai7.jpg" alt="">
+            <div class="good_name">九号平衡车燃动版</div>
+            <div class="goods_desc">铝合金停车支架 / 可折叠拉杆</div>
+            <div class="good_price">￥2200.00元</div>
+          </a>
+        </div>
+      </li>
+      <li>
+        <div>
+          <a href="">
+            <img src="../resource/remai8.jpg" alt="">
+            <div class="good_name">华为儿童手表 3s</div>
+            <div class="goods_desc">学生智能电话手表</div>
+            <div class="good_price">￥638.00元</div>
+          </a>
+        </div>
+      </li>
+      <li>
+        <div>
+          <a href="">
+            <img src="../resource/remai9.jpg" alt="">
+            <div class="good_name">荣耀畅玩平板2 9.6英寸</div>
+            <div class="goods_desc">大电池长续航追剧一整天！</div>
+            <div class="good_price">￥900.00元</div>
+          </a>
+        </div>
+      </li>
+      <li>
+        <div>
+          <a href="">
+            <img src="../resource/remai10.jpg" alt="">
+            <div class="good_name">荣耀平板5 8英寸</div>
+            <div class="goods_desc">麒麟710芯片 杜比音效 全高清</div>
+            <div class="good_price">￥900.00元</div>
+          </a>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <!-- 新闻资讯 -->
+  <div class="news">
+    <div class="news_title">新闻资讯</div>
+    <ul>
+      <li>
+        <div><img src="../resource/xw1.jpg" alt=""></div>
+        <div class="newtitle"><a href="#">怎样做好一个商城类的企业网站</a></div>
+        <p>自从电商的发展不断走向繁荣以来，各种商城网站在互联网...</p>
+        <div class="newtime">2020/1/5</div>
+      </li>
+      <li>
+        <div><img src="../resource/xw2.jpg" alt=""></div>
+        <div class="newtitle"><a href="#">软文内容和关键词要如何结合站</a></div>
+        <p>很多站长写文章 说哪里有这么多原创啊，哪里写的出那么多文字啊...</p>
+        <div class="newtime">2020/1/5</div>
+      </li>
+      <li>
+        <div><img src="../resource/xw3.jpg" alt=""></div>
+        <div class="newtitle"><a href="#">怎样写一个有搜索权重的标题?</a></div>
+        <p>首先要找准主关键词，大家可以根据店铺运营的类目...</p>
+        <div class="newtime">2020/1/5</div>
+      </li>
+      <li>
+        <div><img src="../resource/xw4.jpg" alt=""></div>
+        <div class="newtitle"><a href="#">如何做好电商商品的关键词的优化？</a></div>
+        <p>关键词长度，不要选择太长的关键词，最好是单个词或短语，长句要避免...</p>
+        <div class="newtime">2020/1/5</div>
+      </li>
+    </ul>
+  </div>
+
+  </section>
+  <!-- 页尾部分 -->
+  <footer>
+    <div class="footer_img"><img src="../resource/footer.jpg" alt=""></div>
+    <div class="yewei">
+      <div>
+        <div><img src="../resource/logo.png" alt=""></div>
+        <div><img src="../resource/footerFont.png" alt=""></div>
+      </div>
+      <ul>
+        <li>购物指南</li>	
+          <li><a href="">选择配送方式</a></li>
+          <li><a href="">付款收货</a></li>
+          <li><a href="">挑选商品</a></li>
+      </ul>
+      <ul>
+        <li>送货说明</li>	
+        <li><a href="">购物流程</a></li>
+        <li><a href="">订购方式</a></li>
+        <li><a href="">注意事项</a></li>
+      </ul>
+      <ul>
+        <li>支付方式</li>	
+        <li><a href="">货到付款区域</a></li>
+        <li><a href="">支付方式说明</a></li>
+        <li><a href="">货到付款</a></li>
+      </ul>
+      <ul>
+        <li>关于我们</li>	
+        <li><a href="">关于企业</a></li>
+        <li><a href="">联系我们</a></li>
+        <li><a href="">合作加盟</a></li>   
+      </ul>
+    </div>
+  </footer>
+</body>
+</html>
